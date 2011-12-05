@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/widgetbackcolor"
+        android:padding="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTitle"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select volume level"
+                android:textSize="16sp" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/textViewVolume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textSize="16sp"
+                android:textStyle="bold" >
+            </TextView>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/relativeLayoutTitle"
+            android:layout_below="@+id/relativeLayoutTitle"
+            android:text="0%" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutTitle"
+            android:layout_toRightOf="@+id/button0"
+            android:text="25%" />
+
+        <Button
+            android:id="@+id/button50"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayoutTitle"
+            android:layout_toRightOf="@+id/button25"
+            android:text="50%" />
+
+        <Button
+            android:id="@+id/button75"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button0"
+            android:layout_below="@+id/button0"
+            android:text="75%" />
+
+        <Button
+            android:id="@+id/button100"
+            android:layout_width="131dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button0"
+            android:layout_toRightOf="@+id/button75"
+            android:text="100%" />
+
+        <SeekBar
+            android:id="@+id/seekBarVolume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button75"
+            android:layout_below="@+id/button75"
+            android:padding="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
